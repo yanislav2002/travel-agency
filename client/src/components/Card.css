@@ -1,0 +1,93 @@
+.card-container {
+    width: 34em;
+    height: 14em;
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+    align-items: end;
+    justify-content: space-between;
+    /* background: rgba(0, 0, 0, 0.3); */
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
+    margin-bottom: 2em;
+    z-index: 1;
+}
+
+.gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    position: absolute;
+    margin-left: -1em;
+    margin-bottom: -1em;
+    z-index: 3;
+    /* background-color: #163950; */
+    width: 100%;
+    height: 100%;
+}
+
+.card-container h3 {
+    color: #fff;
+    margin: 0;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card-inner-container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+}
+
+.card-price::before { 
+    content: "for only €";
+    z-index: 10;
+}
+
+.card-price {
+    font-weight: 900;
+    color: #80ED99;
+    z-index: 10;
+}
+
+.card-img-container img {
+    position: absolute;
+    z-index: 1;
+    max-width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-45%);
+    /* filter: blur(1px); */
+
+    
+}
+
+.card-link a {
+    text-decoration: none;
+    background-color: #80ED99;
+    color: #22577A;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    padding-right: 1em;
+    transition: ease-in-out 0.3s;
+    z-index: 10;
+
+}
+
+.card-link a:hover {
+    background-color: #4CE670;
+    color: #163950;
+    z-index: 10;
+
+}
+
+.card-link {
+    padding: 0.5em 0;
+    z-index: 10;
+
+}
+
+

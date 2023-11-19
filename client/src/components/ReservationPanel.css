@@ -1,0 +1,72 @@
+
+.book-container{
+    padding: 0 2em;
+    padding-bottom: 2em;
+    border: #22577A solid 1px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.book-container h2 {
+    font-weight: bold;
+}
+
+.text-area-container {
+    display: flex;
+    align-items: end;
+    gap: 2em
+}
+
+.text-box {
+    height: 2.5em;
+    box-sizing: border-box;
+    min-width: 5em;
+    border: #22577A solid 1px;
+    padding-left: 0.5em;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+    border: #22577A solid 1px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+button {
+    max-height: 2.5em;
+    padding: 0.5em 1.5em;
+    background-color: #22577A;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    font-weight: 1000;
+    border: none;
+}
+
+button:hover {
+    background-color: #38A3A5;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+button:hover:after {
+    width: 200%;
+    height: 500%;
+}
