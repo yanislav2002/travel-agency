@@ -1,6 +1,89 @@
-.cards-container {
+.catalog-page {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2em;
 }
 
+.catalog-cards {
+    padding: 2em 2em 0 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border: #22577A solid 1px;
+}
+
+.catalog-top {
+    display: flex;
+    gap: 2em;
+}
+
+.admin-add-card {
+    display: flex;
+    border: #22577A solid 2px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    max-width: 15em;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.admin-link {
+    background-color: #38A3A5;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 0;
+    z-index: 10;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
+}
+
+.admin-link:after {
+    content: '';
+    position: absolute;
+    width: 5em;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 8px;
+    left: 1em;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.admin-link.link2:after {
+    width: 2.1em;
+}
+
+.admin-link.link3:after {
+    width: 3.3em;
+}
+
+.admin-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.pages a {
+    border: #22577A solid 1px;
+    padding: 1em;
+    text-decoration: none;
+    color: #22577A;
+    transition: ease-in-out 0.2s;
+}
+
+.pages a:hover {
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    background-color: rgba(219,219,219,1);
+}

@@ -2,20 +2,19 @@ import './App.css';
 import Catalog from './Catalog.jsx';
 import Details from './Details.jsx';
 import Home from './Home.jsx';
+import Profile from './Profile.jsx';
 
 function App() {
     return (
         <div className="site-body">
 
-            {/* <Home /> */}
-
-            <Details />
+            <Home />
 
             {/* <Catalog /> */}
 
-            {/* TODO: PROFILE PAGE */}
+            {/* <Details /> */}
 
-            {/* TODO: Modals- login, register, images */}
+            {/* <Profile /> */}
 
         </div>
     );

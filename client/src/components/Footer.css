@@ -1,0 +1,13 @@
+.site-footer {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 2em;
+    height: 4em;
+
+    background: rgb(27,72,102);
+    background: linear-gradient(90deg, rgba(27,72,102,1) 0%, rgba(34,87,122,1) 50%, rgba(27,72,102,1) 100%);
+
+    box-shadow: 0 -0.2em 2em rgba(0, 0, 0, 0.3);
+    margin-top: 2em;
+}

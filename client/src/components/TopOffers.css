@@ -1,5 +1,9 @@
 .top-offers-container {
-    background-color: #80ED99;
+    /* background-color: #80ED99;*/
+
+    background: rgb(107,218,133);
+    background: radial-gradient(circle, rgba(107,218,133,1) 0%, rgba(128,237,153,1) 35%, rgba(96,203,121,1) 100%);
+
     border: #22577A solid 1px;
 }
 
@@ -9,7 +13,6 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-    
 }
 
 .text-container {
