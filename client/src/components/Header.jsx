@@ -3,7 +3,8 @@ import './Header.css';
 export default function Header() {
     return(
         <header className='site-header'>
-            <div className='logo-container'><p>Varna Travel</p></div>
+            <a href="#" className='logo-container'><img src="./varna-travel.png" alt="logo" /></a>
+
             <div className='menu-container'>
                 <ul>
                     <li><a href="#">Catalog</a></li>
