@@ -6,11 +6,11 @@ export default function Modal ({children}) {
 
             <span className="close">&times;</span>
 
-            <form className='modal-form'>
+            {/* <form className='modal-form'>  */}
 
                 {children}
 
-            </form>
+            {/* </form> */}
 
         </div>
     );

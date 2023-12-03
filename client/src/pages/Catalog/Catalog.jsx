@@ -1,6 +1,6 @@
 import './Catalog.css'; 
-import Card from './components/Card.jsx';
-import Filter from './components/Filter.jsx';
+import Card from '../../components/Card/Card.jsx';
+import Filter from '../../components/Filter/Filter.jsx';
 
 export default function Catalog() {
     return(

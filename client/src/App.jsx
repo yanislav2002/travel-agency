@@ -1,40 +1,32 @@
-import './App.css';
-import Catalog from './Catalog.jsx';
-import Details from './Details.jsx';
-import Home from './Home.jsx';
-import Profile from './Profile.jsx';
-import LoginModal from './modals/LoginModal.jsx';
-import RegisterModal from './modals/RegesterModal.jsx';
-import EditCardModal from './modals/EditCardModal.jsx';
-import Error404 from './Error404.jsx';
-import EditProfileModal from './modals/EditProfileModal.jsx';
-import AddCardModal from './modals/AddCardModal.jsx';
+import Catalog from './pages/Catalog/Catalog.jsx';
+import Details from './pages/Details/Details.jsx';
+import Home from './pages/Home/Home.jsx';
+import Profile from './pages/Profile/Profile.jsx';
+import LoginModal from './components/Modals/Modals/LoginModal.jsx';
+import RegisterModal from './components/Modals/Modals/RegesterModal.jsx';
+import EditCardModal from './components/Modals/Modals/EditCardModal.jsx';
+import Error404 from './pages/Error404/Error404.jsx';
+import EditProfileModal from './components/Modals/Modals/EditProfileModal.jsx';
+import AddCardModal from './components/Modals/Modals/AddCardModal.jsx';
+import { Routes, Route } from 'react-router-dom'; 
 
 function App() {
     return (
         <div className="site-body">
-
-            {/* <Home /> */}
-
-            {/* <Catalog /> */}
-
-            {/* <Details /> */}
-
-            <Profile />
-
-            {/* <Error404 /> */}
-
             
+            <Routes> 
+                <Route path="/" element={<Home/>} />
+                <Route path="/catalog" element={<Catalog/>} />
+                <Route path="/details" element={<Details/>} />
+                <Route path="/profile" element={<Profile/>} />
+                <Route path="*" element={<Error404/>} />
 
-            {/* <RegisterModal/> */}
-
-            {/* <LoginModal /> */}
-
-            {/* <AddCardModal /> */}
-
-            {/* <EditCardModal /> */}
-
-            {/* <EditProfileModal/> */}
+                <Route path="/modal/register" element={<RegisterModal/>} />
+                <Route path="/modal/login" element={<LoginModal/>} />
+                <Route path="/modal/add-card" element={<AddCardModal/>} />
+                <Route path="/modal/edit-card" element={<EditCardModal/>} />
+                <Route path="/modal/edit-profile" element={<EditProfileModal/>} />
+            </Routes>
 
         </div>
     );

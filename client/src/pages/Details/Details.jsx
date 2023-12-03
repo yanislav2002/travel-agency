@@ -1,7 +1,7 @@
 import './Details.css';
-import ReservationPanel from './components/ReservationPanel';
-import ImagePanel from './components/ImagePanel';
-import DetailsPanel from './components/DetailsPanel';
+import ReservationPanel from '../../components/ReservationPanel/ReservationPanel';
+import ImagePanel from '../../components/ImagePanel/ImagePanel';
+import DetailsPanel from '../../components/DetailsPanel/DetailsPanel';
 
 export default function Details() {
     return(

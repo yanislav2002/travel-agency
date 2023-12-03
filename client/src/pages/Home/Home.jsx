@@ -1,6 +1,6 @@
 import './Home.css';
-import TopOffers from './components/TopOffers';
-import SearchPanel from './components/SearchPanel';
+import TopOffers from '../../components/TopOffers/TopOffers';
+import SearchPanel from '../../components/SearchPanel/SearchPanel';
 
 export default function Home() {
     return(

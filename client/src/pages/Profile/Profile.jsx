@@ -1,5 +1,5 @@
 import './Profile.css';
-import Ticket from './components/Ticket';
+import Ticket from '../../components/Ticket/Ticket';
 
 export default function Profile() {
     return(

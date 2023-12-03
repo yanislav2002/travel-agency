@@ -1,5 +1,5 @@
 import './TopOffers.css';
-import Card from './Card.jsx';
+import Card from '../Card/Card.jsx';
 
 export default function TopOffers() {
     return(
