@@ -21,9 +21,10 @@ function App() {
                 <Route path="/profile" element={<Profile/>} />
                 <Route path="*" element={<Error404/>} />
 
+                <Route path="/catalog/add-offer" element={<AddCardModal/>} />
+
                 <Route path="/modal/register" element={<RegisterModal/>} />
                 <Route path="/modal/login" element={<LoginModal/>} />
-                <Route path="/modal/add-card" element={<AddCardModal/>} />
                 <Route path="/modal/edit-card" element={<EditCardModal/>} />
                 <Route path="/modal/edit-profile" element={<EditProfileModal/>} />
             </Routes>

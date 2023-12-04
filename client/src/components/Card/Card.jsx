@@ -1,6 +1,6 @@
 import './Card.css'; 
 
-export default function Card() {
+export default function Card({imgUrl1, title, price}) {
     return(
         <div className='card-container'>
 
@@ -10,15 +10,15 @@ export default function Card() {
             </div>
             
             <div className='card-img-container'>
-                <img src='https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/3d/31/60/manchester-town-hall.jpg?w=700&h=-1&s=1'/>
+                <img src={imgUrl1}/>
             </div>
 
             <div className='gradient'></div>
 
             <div className='content'>
                 <div className='card-inner-container'>
-                    <h3 className='card-title'>Six days trip to Manchester</h3>
-                    <p className='card-price'>1290</p>
+                    <h3 className='card-title'>{title}</h3>
+                    <p className='card-price'>{price}</p>
                 </div>
 
                 <p className='card-link'><a href="#">Read More</a></p>
