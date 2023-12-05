@@ -1,5 +1,11 @@
+import { useContext} from 'react';
+import { Link } from 'react-router-dom';
+
 import Modal from '../Modal.jsx';
-import { useState } from 'react';
+import AuthContext from '../../../contexts/authContext.js';
+import useForm from '../../../custom-hooks/useForm.js';
+import PATHS from '../../../paths.js';
+
 
 const FORM_KEYS = {
     name: 'name',
@@ -9,30 +15,18 @@ const FORM_KEYS = {
 };
 
 export default function RegisterModal() {
-    const[formValues, setFormValues] = useState({
+    const { registerSubmitHandler } = useContext(AuthContext);
+    const {values, onChange, onSubmit} = useForm(registerSubmitHandler, {
         [FORM_KEYS.name]: '',
         [FORM_KEYS.email]: '',
         [FORM_KEYS.password]: '',
         [FORM_KEYS.repeatPassword]: '',
     });
 
-    const changeHandler = (event)  => {
-        setFormValues(state => ({
-            ...state,
-            [event.target.name]: event.target.value, 
-        }));
-    };  
-
-    const sumbitHandler = (event) => {
-        event.preventDefault();
-
-        console.log(formValues);
-    };
-
     return(
         <Modal>
 
-            <form className='modal-form' onSubmit={sumbitHandler}> 
+            <form className='modal-form' onSubmit={onSubmit}> 
 
                 <h2 className='modal-title'>Register</h2>
 
@@ -43,8 +37,8 @@ export default function RegisterModal() {
                         className="modal-text-box" 
                         id="name" 
                         name={FORM_KEYS.name}
-                        value={formValues[FORM_KEYS.name]}
-                        onChange={changeHandler}
+                        value={values[FORM_KEYS.name]}
+                        onChange={onChange}
                         required 
                     />
                 </section>
@@ -56,8 +50,8 @@ export default function RegisterModal() {
                         className="modal-text-box" 
                         id="email" 
                         name={FORM_KEYS.email}
-                        value={formValues[FORM_KEYS.email]}
-                        onChange={changeHandler}
+                        value={values[FORM_KEYS.email]}
+                        onChange={onChange}
                         required
                         />
                 </section>
@@ -69,8 +63,8 @@ export default function RegisterModal() {
                         className="modal-text-box" 
                         id="pass" 
                         name={FORM_KEYS.password}
-                        value={formValues[FORM_KEYS.password]}
-                        onChange={changeHandler} 
+                        value={values[FORM_KEYS.password]}
+                        onChange={onChange} 
                         required 
                     />
                 </section>
@@ -82,8 +76,8 @@ export default function RegisterModal() {
                         type="password" 
                         id="repass" 
                         name={FORM_KEYS.repeatPassword}
-                        value={formValues[FORM_KEYS.repeatPassword]}
-                        onChange={changeHandler}
+                        value={values[FORM_KEYS.repeatPassword]}
+                        onChange={onChange}
                         required 
                     />
                 </section>
@@ -92,7 +86,9 @@ export default function RegisterModal() {
                     <button type="submit">Register</button>
                 </section>
 
-                <p>You already have an acount? <a href="#" className='modal-link' id="register-link">Login from here</a></p>
+                <p>You already have an acount? 
+                    <Link to={PATHS.login} className='modal-link' id="register-link">Login from here</Link>
+                </p>
                 
             </form>
 

@@ -16,6 +16,7 @@ import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import LoginModal from './components/Modals/Modals/LoginModal.jsx';
 import RegisterModal from './components/Modals/Modals/RegesterModal.jsx';
+import Logout from './components/Logout/Logout.jsx';
 import EditCardModal from './components/Modals/Modals/EditCardModal.jsx';
 import EditProfileModal from './components/Modals/Modals/EditProfileModal.jsx';
 import AddCardModal from './components/Modals/Modals/AddCardModal.jsx';
@@ -33,11 +34,25 @@ function App() {
         navigate(PATHS.home);
     };
 
+    const registerSubmitHandler = async (values) => {
+        const result = await authService.register(values.email, values.password, values.name);
+
+        setAuth(result);
+
+        navigate(PATHS.home);
+    };
+
+    const logoutHandler = () => {
+        setAuth({});
+    };
+
     const values = {
         loginSubmitHandler,
+        registerSubmitHandler, 
+        logoutHandler,
         name: auth.username,
         email: auth.email,
-        isAuth: !!auth.username,
+        isAuth: !!auth.accessToken,
     };
 
     return (
@@ -54,9 +69,10 @@ function App() {
                         <Route path={PATHS.profile} element={<Profile/>} />
                         <Route path={PATHS.error404} element={<Error404/>} />
 
-                        <Route path={PATHS.login} element={<LoginModal />} />
-
                         <Route path={PATHS.register} element={<RegisterModal/>} />
+                        <Route path={PATHS.login} element={<LoginModal />} />
+                        <Route path={PATHS.logout} element={<Logout />} />
+
                         <Route path={PATHS.editOffer} element={<EditCardModal/>} />
                         <Route path={PATHS.editProfile} element={<EditProfileModal/>} />
                     </Routes>
