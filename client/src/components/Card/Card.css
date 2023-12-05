@@ -84,6 +84,7 @@
     font-weight: 500;
     margin-bottom: 0;
     z-index: 10;
+    min-width: 7.5em;
 }
 
 .card-link a:after {

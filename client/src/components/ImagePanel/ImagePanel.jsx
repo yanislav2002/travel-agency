@@ -1,22 +1,22 @@
 import './ImagePanel.css';
 
-export default function ImagePanel() {
+export default function ImagePanel({title, imgUrl1, imgUrl2, imgUrl3}) {
     return(
         <div className="img-component">
-            <h2 className='details-title'>Six days trip to Manchester</h2>
+            <h2 className='details-title'>{title}</h2>
 
             <div className="slider-container">
                 <div className="small-container">
                     <div className="small-img">
-                        <img src="https://i2-prod.manchestereveningnews.co.uk/incoming/article17428679.ece/ALTERNATES/s615/1_MWOCT19-121051JPG.jpg" alt="" />
+                        <img src={imgUrl1} />
                     </div>
                     <div className="small-img">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f8/25/ba/caption.jpg?w=1200&h=-1&s=1" alt="" />
+                        <img src={imgUrl2} />
                     </div>
                 </div>
                 <div className="big-container">
                     <div className="big-img">
-                        <img src="https://chartrange.com/wp-content/uploads/2019/02/Manchester-Town-Hall.jpg" alt="" />
+                        <img src={imgUrl3} />
                     </div>
                 </div>
             </div>

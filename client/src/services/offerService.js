@@ -9,16 +9,14 @@ export const getAllOffers = async () => {
     return Object.values(result);
 };
 
-export const create = async (offerData) => {
-    const response = await fetch(baseUrl, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(offerData),
-    });
+export const getOneOffer = async (offerId) => {
+    const result = await request('GET', `${baseUrl}/${offerId}`);
 
-    const result = await response.json();
+    return result;
+};
+
+export const create = async (offerData) => {
+    const result = await request('POST', baseUrl, offerData);
 
     return result;
 };

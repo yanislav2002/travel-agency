@@ -1,6 +1,6 @@
 import './DetailsPanel';
 
-export default function DetailsPanel() {
+export default function DetailsPanel({startDate, endDate, price, transport, numberOfPlaces, locations}) {
     return(
         <div className="details-container">
 
@@ -8,9 +8,10 @@ export default function DetailsPanel() {
                 <section>
                     <h4>Details of Package:</h4>
                     <ul> 
-                        <li><p>Length of stay: 5 nights</p></li>
-                        <li><p>Meal plan: Bed & Breakfast</p></li>
-                        <li><p>Room Type: 1 Bedroom Luxury Apartment, Lounge, Kitchen</p></li>
+                        <li><p>Length of stay: {startDate} - {endDate}</p></li>
+                        <li><p>Price: {price} €</p></li>
+                        <li><p>Available places: {numberOfPlaces}</p></li>
+                        <li><p>Transport: {transport}</p></li>
                     </ul>
                 </section>
                 
@@ -26,8 +27,7 @@ export default function DetailsPanel() {
 
             <div className='details-more-info'>
                 <h4>What you will visit:</h4>
-                <p>Beau Vallon Beach (15-minute walk), Water sports, 
-                    Variety of Restaurants & Supermarkets in the area, Pharmacy, Money Exchange, Casino.</p>
+                <p>{locations}</p>
             </div>
 
         </div>   

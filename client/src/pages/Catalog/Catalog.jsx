@@ -13,8 +13,6 @@ export default function Catalog() {
             .then(result => setOffers(result));
     }, []);
 
-    console.log(offers);
-
     return(
         <div className='catalog-page'>
 
@@ -28,8 +26,12 @@ export default function Catalog() {
             <div className="catalog-cards">
                 
                 {offers.map(offer => (
-                    <Card {...offer}/>
+                    <Card key={offer._id} {...offer}/>
                 ))}
+
+                {offers.length == 0 && (
+                    <h3>No offers yet</h3>
+                )}
 
             </div>
 
