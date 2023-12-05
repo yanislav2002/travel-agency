@@ -33,8 +33,15 @@ function App() {
         navigate(PATHS.home);
     };
 
+    const values = {
+        loginSubmitHandler,
+        name: auth.username,
+        email: auth.email,
+        isAuth: !!auth.username,
+    };
+
     return (
-        <AuthContext.Provider value={{ loginSubmitHandler, ...auth }}>
+        <AuthContext.Provider value={values}>
 
                 <Header />
 
