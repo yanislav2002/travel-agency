@@ -1,6 +1,10 @@
-import Modal from '../Modal';
-import * as gameService from '../../../services/offerService';
 import { useNavigate } from 'react-router-dom';
+
+import * as gameService from '../../../services/offerService';
+import PATHS from '../../../paths';
+
+import Modal from '../Modal';
+
 
 const FORM_KEYS = {
     title: 'title',
@@ -26,7 +30,7 @@ export default function AddCardModal() {
         try {
             await gameService.create(offerData);
     
-            navigate('/catalog');
+            navigate(PATHS.catalog);
         } catch(err) {
             console.log(err);
         }

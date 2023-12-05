@@ -1,8 +1,11 @@
-import Modal from '../Modal.jsx';
-import useForm from '../../../custom-hooks/useForm.js';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
+
+import useForm from '../../../custom-hooks/useForm.js';
 import AuthContext from '../../../contexts/authContext.js';
+import PATHS from '../../../paths.js';
+
+import Modal from '../Modal.jsx';
 
 const FORM_KEYS = {
     email: 'email',
@@ -51,7 +54,7 @@ export default function LoginModal() {
                     <button type="submit">Login</button>
                 </section>
 
-                <p>You are not registered yet? <Link to="/register" className='modal-link'>Sign in now</Link></p>
+                <p>You are not registered yet? <Link to={PATHS.register} className='modal-link'>Sign in now</Link></p>
             </form>
         </Modal> 
     );

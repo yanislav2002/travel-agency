@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import * as authService from './services/authService.js';
 import AuthContext from './contexts/authContext.js';
+import PATHS from './paths.js';
 
 import Home from './pages/Home/Home.jsx';
 import Catalog from './pages/Catalog/Catalog.jsx';
@@ -26,7 +27,7 @@ function App() {
 
         setAuth(result);
 
-        navigate('/');
+        navigate(PATHS.home);
     };
 
     return (
@@ -34,18 +35,18 @@ function App() {
             <div className="site-body">
                 
                 <Routes> 
-                    <Route path="/" element={<Home/>} />
-                    <Route path="/catalog" element={<Catalog/>} />
-                    <Route path="/catalog/:offerId" element={<Details/>} />
-                    <Route path="/catalog/add-offer" element={<AddCardModal/>} />
-                    <Route path="/profile" element={<Profile/>} />
-                    <Route path="*" element={<Error404/>} />
+                    <Route path={PATHS.home} element={<Home/>} />
+                    <Route path={PATHS.catalog} element={<Catalog/>} />
+                    <Route path={PATHS.details} element={<Details/>} />
+                    <Route path={PATHS.addOffer} element={<AddCardModal/>} />
+                    <Route path={PATHS.profile} element={<Profile/>} />
+                    <Route path={PATHS.error404} element={<Error404/>} />
 
-                    <Route path="login" element={<LoginModal />} />
+                    <Route path={PATHS.login} element={<LoginModal />} />
 
-                    <Route path="/modal/register" element={<RegisterModal/>} />
-                    <Route path="/modal/edit-card" element={<EditCardModal/>} />
-                    <Route path="/modal/edit-profile" element={<EditProfileModal/>} />
+                    <Route path={PATHS.register} element={<RegisterModal/>} />
+                    <Route path={PATHS.editOffer} element={<EditCardModal/>} />
+                    <Route path={PATHS.editProfile} element={<EditProfileModal/>} />
                 </Routes>
 
             </div>

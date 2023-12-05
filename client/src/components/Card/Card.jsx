@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+
 import './Card.css'; 
+
 
 export default function Card({_id, imgUrl1, title, price}) {
     return(
@@ -22,7 +24,7 @@ export default function Card({_id, imgUrl1, title, price}) {
                     <p className='card-price'>{price}</p>
                 </div>
 
-                <p className='card-link'><Link to={`/catalog/${_id}`}>Read More</Link></p>
+                <p className='card-link'><Link to={`/offers/${_id}`}>Read More</Link></p>
             </div>
 
         </div>

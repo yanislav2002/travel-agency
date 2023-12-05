@@ -4,6 +4,7 @@ import Filter from '../../components/Filter/Filter.jsx';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import * as offerService from '../../services/offerService.js';
+import PATHS from '../../paths.js';
 
 export default function Catalog() {
     const [offers, setOffers] = useState([]);
@@ -19,7 +20,7 @@ export default function Catalog() {
             <div className='catalog-top'>
                 <Filter />
                 <div className="admin-add-card">
-                    <p className='add-card-link'><Link to="/catalog/add-offer" className='admin-link'>Add Offer</Link></p>
+                    <p className='add-card-link'><Link to={PATHS.addOffer} className='admin-link'>Add Offer</Link></p>
                 </div>
             </div>
 
