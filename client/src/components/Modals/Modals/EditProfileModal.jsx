@@ -10,7 +10,7 @@ export default function EditProfileModal() {
                     <label htmlFor="name">New email:</label>
                     <input className="modal-text-box" type="email" required />
                 </section>
-                
+                 
                 <section>
                     <label htmlFor="name">New name:</label>
                     <input className="modal-text-box" type="text" required />

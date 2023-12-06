@@ -10,8 +10,9 @@ const PATHS = {
     register: '/register',
     logout: '/logout',
     
-    addOffer: '/offers/add-offer',
-    editOffer: '/offers/edit-offer',
+    addOffer: '/offers/add',
+    editOffer: '/offers/:_id/edit',
+    deleteOffer: '/offers/:_id/delete',
     editProfile: '/profile/edit-profile',
 };
 

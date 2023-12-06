@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import * as gameService from '../../../services/offerService';
+import * as offerService from '../../../services/offerService';
 import PATHS from '../../../paths';
 
 import Modal from '../Modal';
@@ -28,7 +28,7 @@ export default function AddCardModal() {
         const offerData = Object.fromEntries(new FormData(event.currentTarget));
 
         try {
-            await gameService.create(offerData);
+            await offerService.create(offerData);
     
             navigate(PATHS.catalog);
         } catch(err) {

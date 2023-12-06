@@ -20,3 +20,9 @@ export const create = async (offerData) => {
 
     return result;
 };
+
+export const edit = async (offerId, offerData) => {
+    const result = await request('PUT', `${baseUrl}/${offerId}`, offerData);
+
+    return result;
+};
