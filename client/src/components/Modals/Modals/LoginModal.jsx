@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 
 import useForm from '../../../custom-hooks/useForm.js';
-import AuthContext from '../../../contexts/authContext.js';
+import AuthContext from '../../../contexts/authContext.jsx';
 import PATHS from '../../../paths.js';
 
 import Modal from '../Modal.jsx';

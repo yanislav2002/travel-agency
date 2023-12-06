@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './App.css';
 import * as authService from './services/authService.js';
-import AuthContext from './contexts/authContext.js';
+import { AuthProvider } from './contexts/authContext.jsx';
 import PATHS from './paths.js';
 
 import Home from './pages/Home/Home.jsx';
@@ -23,13 +23,21 @@ import AddCardModal from './components/Modals/Modals/AddCardModal.jsx';
 
 
 function App() {
+    const accessToken = 'accessToken';
     const navigate = useNavigate();
-    const [auth, setAuth] = useState({});
+
+    const [auth, setAuth] = useState(() => {
+        localStorage.removeItem(accessToken);
+
+        return {};
+    });
 
     const loginSubmitHandler = async (values) => {
         const result = await authService.login(values.email, values.password);
 
         setAuth(result);
+        
+        localStorage.setItem(accessToken, result.accessToken);
 
         navigate(PATHS.home);
     };
@@ -39,11 +47,15 @@ function App() {
 
         setAuth(result);
 
+        localStorage.setItem(accessToken, result.accessToken);
+
         navigate(PATHS.home);
     };
 
     const logoutHandler = () => {
         setAuth({});
+
+        localStorage.removeItem(accessToken);
     };
 
     const values = {
@@ -56,7 +68,7 @@ function App() {
     };
 
     return (
-        <AuthContext.Provider value={values}>
+        <AuthProvider value={values}>
 
                 <Header />
 
@@ -80,7 +92,7 @@ function App() {
 
                 <Footer />
 
-        </AuthContext.Provider>
+        </AuthProvider>
     );
 }
 

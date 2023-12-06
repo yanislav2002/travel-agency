@@ -1,12 +1,12 @@
 import { request } from '../utils/request';
 
 
-const baseUrl = 'http://localhost:3030/jsonstore/offers';
+const baseUrl = 'http://localhost:3030/data/offers';
 
 export const getAllOffers = async () => {
     const result = await request('GET', baseUrl);
 
-    return Object.values(result);
+    return result;
 };
 
 export const getOneOffer = async (offerId) => {
