@@ -11,7 +11,10 @@ export default function Catalog() {
 
     useEffect(() => {
         offerService.getAllOffers()
-            .then(result => setOffers(result));
+            .then(result => setOffers(result))
+            .catch(err => {
+                console.log(err);
+            });
     }, []);
 
     return(

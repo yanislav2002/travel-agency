@@ -13,8 +13,10 @@ export default function TopOffers() {
         .map(offer => ({ ...offer, price: Number(offer.price) })) 
         .sort((a, b) => a.price - b.price)
         .slice(0, 2);
-
+        
         setOffers(sortedOffers);
+    }).catch(err => {
+        console.log(err);
     });
     }, []); 
 

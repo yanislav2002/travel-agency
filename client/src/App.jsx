@@ -1,8 +1,6 @@
-import { Routes, Route, useNavigate } from 'react-router-dom'; 
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom'; 
 
 import './App.css';
-import * as authService from './services/authService.js';
 import { AuthProvider } from './contexts/authContext.jsx';
 import PATHS from './paths.js';
 
@@ -23,52 +21,9 @@ import AddCardModal from './components/Modals/Modals/AddCardModal.jsx';
 
 
 function App() {
-    const accessToken = 'accessToken';
-    const navigate = useNavigate();
-
-    const [auth, setAuth] = useState(() => {
-        localStorage.removeItem(accessToken);
-
-        return {};
-    });
-
-    const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
-
-        setAuth(result);
-        
-        localStorage.setItem(accessToken, result.accessToken);
-
-        navigate(PATHS.home);
-    };
-
-    const registerSubmitHandler = async (values) => {
-        const result = await authService.register(values.email, values.password, values.name);
-
-        setAuth(result);
-
-        localStorage.setItem(accessToken, result.accessToken);
-
-        navigate(PATHS.home);
-    };
-
-    const logoutHandler = () => {
-        setAuth({});
-
-        localStorage.removeItem(accessToken);
-    };
-
-    const values = {
-        loginSubmitHandler,
-        registerSubmitHandler, 
-        logoutHandler,
-        name: auth.username,
-        email: auth.email,
-        isAuth: !!auth.accessToken,
-    };
-
+   
     return (
-        <AuthProvider value={values}>
+        <AuthProvider>
 
                 <Header />
 
