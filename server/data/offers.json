@@ -1,0 +1,58 @@
+[
+    {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "title": "One week trip to Italy",
+        "startDate": "2024-04-08",
+        "endDate": "2024-04-14",
+        "price": "3200",
+        "transport": "bus",
+        "numberOfPlaces": "150",
+        "locations": "Rome, Florence, Amalfi coast, Milano, San siro",
+        "imgUrl1": "https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg",
+        "imgUrl2": "https://media.audleytravel.com/-/media/images/home/blog/2022/november/top-15-places-to-visit-in-italy/amalfi-coast-shutterstock_1436187389-1000x3000-1080x1512.webp?q=79&w=800&h=571",
+        "imgUrl3": "https://world2explore.eu/wp-content/uploads/2023/04/IMG_6755-scaled.jpg",
+        "_id": "c058512a-d5b2-4d5b-ba89-ec0f6c7e73af"
+    },
+    {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "title": "Weekend in Stockholm",
+        "startDate": "2023-12-07",
+        "endDate": "2023-12-10",
+        "price": "1160",
+        "transport": "bus",
+        "numberOfPlaces": "60",
+        "locations": "Stockholm, Gamla stan, Vasa museum, Abba museum, The royal palace, Stockholm City Hall and more",
+        "imgUrl1": "https://www.travelandleisure.com/thmb/eu_fq7aoSb0sX87bxTbGsehqQEM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/stockholm-se-STOCKHOLMTG0721-6d6d4ffaf1eb4338ac6f90759dc61c11.jpg",
+        "imgUrl2": "https://s3-eu-north-1.amazonaws.com/py3.visitsweden.com/images/Trygg_Sthlm_Heli_2_352_High-res-CMSTemplate_g.width-1500.jpg",
+        "imgUrl3": "https://media.gq-magazine.co.uk/photos/5d13960ad7a70172e9bba60a/16:9/w_1280,c_limit/Stockholm-hp-GQ-21Jul15_istock_b.jpg",
+        "_id": "6b8489ae-0fad-4895-a933-64b16671e020"
+    },
+    {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "title": "Weekend at Manchester",
+        "startDate": "2023-12-22",
+        "endDate": "2023-12-24",
+        "price": "900",
+        "transport": "plane",
+        "numberOfPlaces": "60",
+        "locations": "Manchester, Old Trafford",
+        "imgUrl1": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/3d/31/60/manchester-town-hall.jpg?w=700&h=-1&s=1",
+        "imgUrl2": "https://a.cdn-hotels.com/gdcs/production154/d741/1e9a6e63-fdb9-49cd-9f7f-14f99925514d.jpg",
+        "imgUrl3": "https://ichef.bbci.co.uk/news/976/cpsprodpb/6D31/production/_131135972_mediaitem131135971.jpg",
+        "_id": "de67458c-b4c9-4501-aafd-f03c3909fcdc"
+    },
+    {
+        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+        "title": "10 days in Los Cabos, Mexico",
+        "startDate": "2024-08-19",
+        "endDate": "2024-08-29",
+        "price": "4300",
+        "transport": "plane",
+        "numberOfPlaces": "100",
+        "locations": "Los Cabos beaches",
+        "imgUrl1": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/loscabosmx/Arco_I9A0109_V2_0bb6b65a-6293-4918-a9dd-6e82822e1299.jpg",
+        "imgUrl2": "https://a.cdn-hotels.com/gdcs/production171/d1958/0b23e146-74c8-4907-85c5-a0f9d24059e3.jpg?impolicy=fcrop&w=800&h=533&q=medium",
+        "imgUrl3": "https://www.usatoday.com/gcdn/presto/2021/10/29/USAT/fed1534b-6102-49d1-a0da-5da791bc055a-GettyImages-1272352193.jpg",
+        "_id": "86d1389d-e956-43ae-9b4b-a562d7a1df58"
+    }
+]
