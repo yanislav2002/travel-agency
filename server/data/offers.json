@@ -1,6 +1,5 @@
-[
-    {
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+{
+    "c058512a-d5b2-4d5b-ba89-ec0f6c7e73af": {
         "title": "One week trip to Italy",
         "startDate": "2024-04-08",
         "endDate": "2024-04-14",
@@ -13,8 +12,7 @@
         "imgUrl3": "https://world2explore.eu/wp-content/uploads/2023/04/IMG_6755-scaled.jpg",
         "_id": "c058512a-d5b2-4d5b-ba89-ec0f6c7e73af"
     },
-    {
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+    "6b8489ae-0fad-4895-a933-64b16671e020": {
         "title": "Weekend in Stockholm",
         "startDate": "2023-12-07",
         "endDate": "2023-12-10",
@@ -27,8 +25,7 @@
         "imgUrl3": "https://media.gq-magazine.co.uk/photos/5d13960ad7a70172e9bba60a/16:9/w_1280,c_limit/Stockholm-hp-GQ-21Jul15_istock_b.jpg",
         "_id": "6b8489ae-0fad-4895-a933-64b16671e020"
     },
-    {
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+    "de67458c-b4c9-4501-aafd-f03c3909fcdc": {
         "title": "Weekend at Manchester",
         "startDate": "2023-12-22",
         "endDate": "2023-12-24",
@@ -41,8 +38,7 @@
         "imgUrl3": "https://ichef.bbci.co.uk/news/976/cpsprodpb/6D31/production/_131135972_mediaitem131135971.jpg",
         "_id": "de67458c-b4c9-4501-aafd-f03c3909fcdc"
     },
-    {
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+    "86d1389d-e956-43ae-9b4b-a562d7a1df58": {
         "title": "10 days in Los Cabos, Mexico",
         "startDate": "2024-08-19",
         "endDate": "2024-08-29",
@@ -55,4 +51,4 @@
         "imgUrl3": "https://www.usatoday.com/gcdn/presto/2021/10/29/USAT/fed1534b-6102-49d1-a0da-5da791bc055a-GettyImages-1272352193.jpg",
         "_id": "86d1389d-e956-43ae-9b4b-a562d7a1df58"
     }
-]
+}
