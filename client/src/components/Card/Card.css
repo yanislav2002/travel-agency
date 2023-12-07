@@ -19,7 +19,8 @@
     display: flex;
     align-items: end;
     gap: 3em;
-    justify-content: start;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .admin-panel {
@@ -85,6 +86,14 @@
     margin-bottom: 0;
     z-index: 10;
     min-width: 7.5em;
+}
+
+#card-link a:after {
+    width: 5.5em;
+}
+
+.link-card a:after {
+    width: 10.5em;
 }
 
 .card-link a:after {

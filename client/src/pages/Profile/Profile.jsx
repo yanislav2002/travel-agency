@@ -17,7 +17,7 @@ export default function Profile() {
                 </div>
 
                 <div className="user-links">
-                    <p className='card-link'><a href="#">Edit</a></p>
+                    <p className='card-link' id="edit-link"><a href="#">Edit</a></p>
                 </div>
 
             </div>

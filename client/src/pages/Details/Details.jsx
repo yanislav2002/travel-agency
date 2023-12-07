@@ -1,14 +1,23 @@
+import { useContext, useEffect, useState } from 'react';
+
 import './Details.css';
 import ReservationPanel from '../../components/ReservationPanel/ReservationPanel';
 import ImagePanel from '../../components/ImagePanel/ImagePanel';
 import DetailsPanel from '../../components/DetailsPanel/DetailsPanel';
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 import * as offerService from '../../services/offerService';
+import AuthContext from '../../contexts/authContext';
+
 
 export default function Details() {
     const [offer, setOffer] = useState({});
     const { offerId } = useParams();
+
+    const {
+        email,
+    } = useContext(AuthContext);
+
+    const isAdmin = (email == 'admin@abv.bg');
 
     useEffect(() => {
         offerService.getOneOffer(offerId)
@@ -20,7 +29,7 @@ export default function Details() {
             
             <ImagePanel key={offer._id} {...offer}/>
 
-            <ReservationPanel key={offer._id} {...offer}/>
+            {!(isAdmin) && <ReservationPanel key={offer._id} {...offer}/>}
 
             <DetailsPanel key={offer._id} {...offer}/>
             

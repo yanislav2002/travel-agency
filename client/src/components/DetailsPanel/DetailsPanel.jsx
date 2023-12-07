@@ -14,15 +14,6 @@ export default function DetailsPanel({startDate, endDate, price, transport, numb
                         <li><p>Transport: {transport}</p></li>
                     </ul>
                 </section>
-                
-                <section>
-                    <h4>Package Includes:</h4>
-                    <ul>
-                        <li><p>Taxes</p></li>
-                        <li><p>2 way return Airport transfer</p></li>
-                        <li><p>8-hour Mahe island tour</p></li>
-                    </ul>
-                </section>
             </div>
 
             <div className='details-more-info'>

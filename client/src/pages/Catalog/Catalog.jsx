@@ -2,12 +2,19 @@ import './Catalog.css';
 import Card from '../../components/Card/Card.jsx';
 import Filter from '../../components/Filter/Filter.jsx';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import * as offerService from '../../services/offerService.js';
 import PATHS from '../../paths.js';
+import AuthContext from '../../contexts/authContext.jsx';
 
 export default function Catalog() {
     const [offers, setOffers] = useState([]);
+
+    const {
+        email,
+    } = useContext(AuthContext);
+
+    const isAdmin = (email == 'admin@abv.bg');
 
     useEffect(() => {
         offerService.getAllOffers()
@@ -22,9 +29,12 @@ export default function Catalog() {
 
             <div className='catalog-top'>
                 <Filter />
-                <div className="admin-add-card">
-                    <p className='add-card-link'><Link to={PATHS.addOffer} className='admin-link'>Add Offer</Link></p>
-                </div>
+
+                {isAdmin && (
+                    <div className="admin-add-card">
+                        <p className='add-card-link'><Link to={PATHS.addOffer} className='admin-link'>Add Offer</Link></p>
+                     </div>
+                )}
             </div>
 
             <div className="catalog-cards">

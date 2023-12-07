@@ -11,9 +11,9 @@ export default function Footer() {
             </div>
             <div>
                 <ul>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">Packages</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="/nopage">Destinations</a></li>
+                    <li><a href="/nopage">Packages</a></li>
+                    <li><a href="/nopage">Contact Us</a></li>
                 </ul>
             </div>
             <div className="copyright">
