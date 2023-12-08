@@ -23,6 +23,7 @@ export const getFilteredOffers = async (filteredValues) => {
     allOffers.forEach(offer => {
         const calcDays = calculateDays(offer.startDate, offer.endDate);
 
+        
         if (Number(filteredValues.price) >= offer.price && Number(filteredValues.days) >= calcDays){
             filteredOffers.push(offer);
         }

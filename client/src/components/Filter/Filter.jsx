@@ -26,7 +26,7 @@ export default function Filter({ onFilterSubmit  }){
             <label>
                 <p>Price</p>
                 <select name={FORM_KEYS.selectedPrice}>
-                    <option value="">Select Price</option>
+                    <option value="100000">Select Price</option>
                     <option value="500">Up to 500</option>
                     <option value="1000">Up to 1000</option>
                     <option value="1500">Up to 1500</option>
@@ -39,7 +39,7 @@ export default function Filter({ onFilterSubmit  }){
             <label>
                 <p>Days</p>
                 <select name={FORM_KEYS.selectedDays}>
-                    <option value="">Select Days</option>
+                    <option value="100">Select Days</option>
                     <option value="3">Up to Three</option>
                     <option value="4">Up to Four</option>
                     <option value="5">Up to Five</option>
