@@ -9,7 +9,9 @@ export default function EditProfileModal() {
 
     return(
         <Modal>
-            <span className="close"  onClick={() => navigate(PATHS.profile)}>&times;</span>
+            <form className='modal-form'> 
+
+                <span className="close"  onClick={() => navigate(PATHS.profile)}>&times;</span>
 
                 <h2 className='modal-title'>Edit Profile</h2>
 
