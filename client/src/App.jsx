@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'; 
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'; 
+import { useEffect, useState } from 'react';
 
 import './App.css';
 import { AuthProvider } from './contexts/authContext.jsx';
@@ -21,7 +22,6 @@ import AddCardModal from './components/Modals/Modals/AddCardModal.jsx';
 
 
 function App() {
-   
     return (
         <AuthProvider>
 
@@ -38,13 +38,14 @@ function App() {
 
                         <Route path={PATHS.register} element={<RegisterModal/>} />
                         <Route path={PATHS.login} element={<LoginModal />} />
+
                         <Route path={PATHS.logout} element={<Logout />} />
 
                         <Route path={PATHS.editOffer} element={<EditCardModal/>} />
                         <Route path={PATHS.editProfile} element={<EditProfileModal/>} />
                     </Routes>
                 </div>
-
+                
                 <Footer />
 
         </AuthProvider>

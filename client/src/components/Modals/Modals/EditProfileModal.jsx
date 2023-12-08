@@ -1,9 +1,16 @@
+import { useNavigate } from 'react-router-dom';
+
 import Modal from '../Modal';
+import PATHS from '../../../paths';
+
 
 export default function EditProfileModal() {
+    const navigate = useNavigate();
+
     return(
         <Modal>
-            <form className='modal-form'> 
+            <span className="close"  onClick={() => navigate(PATHS.profile)}>&times;</span>
+
                 <h2 className='modal-title'>Edit Profile</h2>
 
                 <section>

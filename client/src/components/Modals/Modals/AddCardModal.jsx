@@ -38,6 +38,8 @@ export default function AddCardModal() {
 
     return(
         <Modal>
+            <span className="close"  onClick={() => navigate(PATHS.catalog)}>&times;</span>
+
             <form className='modal-form' onSubmit={createOfferSubmitHandler}> 
                 <h2 className='modal-title'>Add offer</h2>
 

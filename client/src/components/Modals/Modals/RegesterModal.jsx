@@ -1,5 +1,5 @@
-import { useContext} from 'react';
-import { Link } from 'react-router-dom';
+import { useContext, useRef} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Modal from '../Modal.jsx';
 import AuthContext from '../../../contexts/authContext.jsx';
@@ -23,8 +23,11 @@ export default function RegisterModal() {
         [FORM_KEYS.repeatPassword]: '',
     });
 
+    const navigate = useNavigate();
+
     return(
         <Modal>
+            <span className="close"  onClick={() => navigate(PATHS.home)}>&times;</span>
 
             <form className='modal-form' onSubmit={onSubmit}> 
 

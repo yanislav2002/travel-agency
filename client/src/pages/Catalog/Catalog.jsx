@@ -44,15 +44,19 @@ export default function Catalog() {
                 ))}
 
                 {offers.length == 0 && (
-                    <h3>No offers yet</h3>
+                    <h3 className='no-offers'>No offers yet</h3>
                 )}
 
             </div>
+            
 
-            <div className='pages'>
-                <a href="#">Prev</a>
-                <a href="#">Next</a>
-            </div>
+            {offers.length != 0 && (
+                <div className='pages'>
+                    <a href="#">Prev</a>
+                    <a href="#">Next</a>
+                </div>
+            )}
+            
         </div>
     );
 }

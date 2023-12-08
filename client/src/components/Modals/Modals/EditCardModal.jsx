@@ -69,6 +69,8 @@ export default function EditCardModal() {
 
     return(
         <Modal>
+            <span className="close"  onClick={() => navigate(PATHS.catalog)}>&times;</span>
+
             <form className='modal-form' onSubmit={editOfferSubmitHandler}> 
                 <h2 className='modal-title'>Edit offer</h2>
 

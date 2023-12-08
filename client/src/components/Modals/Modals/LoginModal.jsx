@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useContext, useEffect, useRef } from 'react';
+
 
 import useForm from '../../../custom-hooks/useForm.js';
 import AuthContext from '../../../contexts/authContext.jsx';
@@ -19,9 +20,14 @@ export default function LoginModal() {
         [FORM_KEYS.password]: '',
     });
 
+    const navigate = useNavigate();
+
     return(
         <Modal>
-            <form className='modal-form' onSubmit={onSubmit}> 
+            <span className="close" onClick={() => navigate(PATHS.home)}>&times;</span>
+            
+            <form className='modal-form' onSubmit={onSubmit} onClick={(e) => e.stopPropagation()}> 
+
                 <h2 className='modal-title'>Login</h2>
 
                 <section>
