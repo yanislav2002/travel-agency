@@ -73,7 +73,7 @@ export default function EditCardModal() {
 
             <form className='modal-form' onSubmit={editOfferSubmitHandler}> 
                 <h2 className='modal-title'>Edit offer</h2>
-
+                
                 <section>
                     <label htmlFor="name">Title:</label>
                     <input 

@@ -1,3 +1,4 @@
+import calculateDays from '../utils/calculateDays';
 import { request } from '../utils/request';
 
 
@@ -13,6 +14,21 @@ export const getOneOffer = async (offerId) => {
     const result = await request('GET', `${baseUrl}/${offerId}`);
 
     return result;
+};
+
+export const getFilteredOffers = async (filteredValues) => {
+    const allOffers = await request('GET', baseUrl);
+    const filteredOffers = [];
+
+    allOffers.forEach(offer => {
+        const calcDays = calculateDays(offer.startDate, offer.endDate);
+
+        if (Number(filteredValues.price) >= offer.price && Number(filteredValues.days) >= calcDays){
+            filteredOffers.push(offer);
+        }
+    });
+    
+    return filteredOffers;
 };
 
 export const create = async (offerData) => {

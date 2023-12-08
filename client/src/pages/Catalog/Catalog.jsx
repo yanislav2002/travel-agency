@@ -9,12 +9,38 @@ import AuthContext from '../../contexts/authContext.jsx';
 
 export default function Catalog() {
     const [offers, setOffers] = useState([]);
+    const [filterValues, setFilterValues] = useState(null);
 
     const {
         email,
     } = useContext(AuthContext);
 
     const isAdmin = (email == 'admin@abv.bg');
+
+    useEffect(() => {
+        if (filterValues) {
+
+            if (filterValues.price == '' && filterValues.days == '') {
+                return;
+            }
+
+            offerService.getFilteredOffers(filterValues)
+                .then(result => setOffers(result))
+                .catch(err => {
+                console.log(err);
+                });
+        } else {
+            offerService.getAllOffers()
+                .then(result => setOffers(result))
+                .catch(err => {
+                console.log(err);
+                });
+        }
+    }, [filterValues]);
+
+    const handleFilterSubmit = (values) => {
+        setFilterValues(values);
+    };
 
     useEffect(() => {
         offerService.getAllOffers()
@@ -28,7 +54,7 @@ export default function Catalog() {
         <div className='catalog-page'>
 
             <div className='catalog-top'>
-                <Filter />
+                <Filter onFilterSubmit={handleFilterSubmit}/> 
 
                 {isAdmin && (
                     <div className="admin-add-card">
