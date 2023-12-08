@@ -1,23 +1,25 @@
 import './Profile.css';
 import Ticket from '../../components/Ticket/Ticket';
+import { useContext } from 'react';
+import AuthContext from '../../contexts/authContext';
 
 export default function Profile() {
+    const {
+        name,
+        email,
+    } = useContext(AuthContext);
+
     return(
         <div className="profile-page">
             <div className="user-info">
 
                 <div className="user-img-container">
-                    <img src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1328"/>
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"/>
                 </div>
 
                 <div className="user-details">
-                    <h4>Jivko Milanov</h4>
-                    <h5>jivkom94@abv.bg</h5>
-                    <p>user</p>
-                </div>
-
-                <div className="user-links">
-                    <p className='card-link' id="edit-link"><a href="#">Edit</a></p>
+                    <h4>{name}</h4>
+                    <h5>{email}</h5>
                 </div>
 
             </div>

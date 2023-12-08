@@ -6,7 +6,7 @@ const FORM_KEYS = {
     selectedDays: 'days', 
 };
 
-export default function Filter({ onFilterSubmit  }){
+export default function Filter({ onFilterSubmit }){
 
     const editOfferSubmitHandler = async (event) => {
         event.preventDefault();
@@ -28,7 +28,7 @@ export default function Filter({ onFilterSubmit  }){
                 <select name={FORM_KEYS.selectedPrice}>
                     <option value="100000">Select Price</option>
                     <option value="500">Up to 500</option>
-                    <option value="1000">Up to 1000</option>
+                    <option value="1000">Up to 1000</option> 
                     <option value="1500">Up to 1500</option>
                     <option value="2000">Up to 2000</option>
                     <option value="2500">Up to 2500</option>
