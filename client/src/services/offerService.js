@@ -43,3 +43,9 @@ export const edit = async (offerId, offerData) => {
 
     return result;
 };
+
+export const remove = async (offerId) => {
+    const result = await request('DELETE', `${baseUrl}/${offerId}`);
+
+    return result;
+};

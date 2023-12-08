@@ -8,7 +8,6 @@ import AuthContext from '../../contexts/authContext';
 
 
 export default function Card({_id, imgUrl1, title, price}) {
-
     const {
         email,
     } = useContext(AuthContext);

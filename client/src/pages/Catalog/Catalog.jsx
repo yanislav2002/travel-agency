@@ -75,14 +75,6 @@ export default function Catalog() {
 
             </div>
             
-
-            {offers.length != 0 && (
-                <div className='pages'>
-                    <a href="#">Prev</a>
-                    <a href="#">Next</a>
-                </div>
-            )}
-            
         </div>
     );
 }

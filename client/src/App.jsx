@@ -18,6 +18,7 @@ import Logout from './components/Logout/Logout.jsx';
 import EditCardModal from './components/Modals/Modals/EditCardModal.jsx';
 import EditProfileModal from './components/Modals/Modals/EditProfileModal.jsx';
 import AddCardModal from './components/Modals/Modals/AddCardModal.jsx';
+import DeleteCardModal from './components/Modals/Modals/DeleteCardModal.jsx';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
                         <Route path={PATHS.logout} element={<Logout />} />
 
                         <Route path={PATHS.editOffer} element={<EditCardModal/>} />
+                        <Route path={PATHS.deleteOffer} element={<DeleteCardModal/>} />
                         <Route path={PATHS.editProfile} element={<EditProfileModal/>} />
                     </Routes>
                 </div>
