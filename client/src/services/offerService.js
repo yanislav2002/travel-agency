@@ -16,7 +16,7 @@ export const getOneOffer = async (offerId) => {
     return result;
 };
 
-export const getFilteredOffers = async (filteredValues) => {
+export const getFilteredOffers = async (filteredValues) => { 
     const allOffers = await request('GET', baseUrl);
     const filteredOffers = [];
 

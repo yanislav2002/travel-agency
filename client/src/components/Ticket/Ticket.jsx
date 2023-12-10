@@ -1,14 +1,15 @@
 import './Ticket.css';
 
-export default function Ticket() {
+
+export default function Ticket({adults, title}) {
     return(
         <div className="ticket">
             <div className="ticket-container">
-                <h3>Six days trip to Manchester</h3>
+                <h3>{title}</h3>
             </div>
             <aside className='ticket-name'>
                 <h3>TICKET</h3>
-                <p>3</p>
+                <p>{adults}</p>
             </aside>
         </div>
     );

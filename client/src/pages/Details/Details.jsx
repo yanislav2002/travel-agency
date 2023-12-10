@@ -15,6 +15,7 @@ export default function Details() {
 
     const {
         email,
+        isAuth
     } = useContext(AuthContext);
 
     const isAdmin = (email == 'admin@abv.bg');
@@ -27,11 +28,11 @@ export default function Details() {
     return(
         <div className="details-page">
             
-            <ImagePanel key={offer._id} {...offer}/>
+            <ImagePanel key={offer._id } {...offer}/>
 
-            {!(isAdmin) && <ReservationPanel key={offer._id} {...offer}/>}
+            {(!isAdmin && isAuth) && <ReservationPanel key={offer._id + '1'} {...offer}/>}
 
-            <DetailsPanel key={offer._id} {...offer}/>
+            <DetailsPanel key={offer._id + '2'} {...offer}/>
             
         </div>
     );

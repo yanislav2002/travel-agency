@@ -1,23 +1,32 @@
-import * as request from '../utils/request';
+import { request } from '../utils/request';
 
 const baseUrl = 'http://localhost:3030/data/tickets';
 
-export const getAll = async (_id) => {
-    const query = new URLSearchParams({
-        where: `_id="${_id}"`,
-        load: `owner=_ownerId:users`,
-    });
+export const create = async (_id, offer, title) => {
+    try {
+        const newTicket = await request('POST', baseUrl, {
+            _id,
+            ...offer,
+            title
+        });
 
-    const result = await request.get(`${baseUrl}?${query}`);
-
-    return result;
+        return newTicket;
+    } catch (error) {
+        console.error(error);
+        throw error; 
+    }
 };
 
-export const create = async (_id, text) => {
-    const newTicket= await request.post(baseUrl, {
-        _id,
-        text,
-    });
+export const getFiltered = async (email) => {
+    const response = await fetch(baseUrl);
+    if (!response.ok) {
+        throw new Error('Failed to fetch tickets');
+    }
 
-    return newTicket;
+    const tickets = await response.json();
+
+    const filteredTickets = tickets.filter(ticket => ticket.email === email);
+
+    return filteredTickets;
 };
+

@@ -3,16 +3,20 @@
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     background-color: #fff;
     display: flex;
-    width: 50%;
+    width: 49%;
     background-color: #EDEDED;		
+    box-sizing: border-box; /* Include padding and border in width calculation */
 
 }
 
 .ticket-container {
     display: flex;
+    flex-direction: column;
     border-right: #22577A dashed 1px;    
+    flex-wrap: wrap;
     padding: 1.5em;
     width: 100%;
+    box-sizing: border-box; 
 }
 
 .ticket-name {
