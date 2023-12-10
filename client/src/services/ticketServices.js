@@ -18,15 +18,19 @@ export const create = async (_id, offer, title) => {
 };
 
 export const getFiltered = async (email) => {
-    const response = await fetch(baseUrl);
-    if (!response.ok) {
-        throw new Error('Failed to fetch tickets');
+    try {
+        const response = await fetch(baseUrl);
+        if (!response.ok) {
+            throw new Error('Failed to fetch tickets');
+        }
+
+        const tickets = await response.json();
+
+        const filteredTickets = tickets.filter(ticket => ticket.email === email);
+
+        return filteredTickets;
+    } catch (error) {
+        console.log(error);
     }
-
-    const tickets = await response.json();
-
-    const filteredTickets = tickets.filter(ticket => ticket.email === email);
-
-    return filteredTickets;
 };
 
